@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-image: url('../public/Sprinkle.svg');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.border-radius {
+  border-radius: 8px;
+}
+
+.laucher {
+  max-width: 1980px;
+  max-height: 1080px;
+  transform-origin: top left;
+}
+
+.springkle {
+  display: grid;
+  grid-template-columns: 300px 350px 1fr;
+  align-items: center;
+  height: 100vh;
+}
+
+/* games info section */
+.game_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: .4;
+  z-index: -1;
+}
+
+/* Nao tirar */
+.game-list-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+  height: max-content;
+}
+
+.game-info {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.game-name { 
+  text-shadow: 4px 3px 0 #7A7A7A;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.other-game {
+  opacity: 0.6;
+  width: 200px;
+  height: 200px;
+}
+
+.selected-game {
+  width: 200px;
+  height: 300px;
+}
+
+.game-playtime {
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 16px;
+  font-size: 1rem;
+  max-width: 200px;
+  display: flex;
+  justify-content: start;
+  gap: 0.5rem;
+}
+
+.game-playtime-value{
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  text-align: center;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* Cards section */
+.card-1, .card-2, .card-3 {
+  min-width: 200px;
+  max-height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.card-2 {
+  display: flex;
+  justify-content: start;
+  max-height: 300px;
+  gap: 2rem;
+}
+
+.card-image {
+  margin-right: 2rem;
+  box-sizing: border-box;
+  border: 8px solid transparent;
+  border-radius: 16px;
+  background: 
+    linear-gradient(#0a0a0a, #0a0a0a) padding-box, 
+    linear-gradient(to right, #ff7e5f, #feb47b) border-box;
+}
+
+.divisa-middle-card {
+  align-self: center;
+  margin-left: 3rem;
+  width: 180px;
+  height: 180px;
+  border: 6px solid transparent;
+  border-radius: 16px;
+  background: 
+    linear-gradient(#0a0a0a, #0a0a0a) padding-box, 
+    linear-gradient(to right, #ff7e5f, #feb47b) border-box;
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .card-1, .card-2, .card-3 {
+    justify-content: start;
+  }
+  .divisa-middle-card, .indicator {
+    display: none;
+  }
+}
+
+.empty-space {
+  max-width: 45%;
+  width: 32%;
+}
+
+/*Test 2*/
+.y-div-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;  
+  width: 300px;
+  height: 100vh;
+}
+
+.center-marker {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  transform: translateY(50%);
+}
