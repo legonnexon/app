@@ -10,7 +10,7 @@ export default function Home() {
   let games = [
     { name: "The Legend of Zelda: The Minish Cap", playtime: "80h", front: 'zelda_front.jpg', back: 'zelda_background.jpg' },
     { name: "Pokemon Emerald", playtime: "160h", front: 'poke_front.jpg', back: 'poke_back.png'},
-    { name: "Sonic Advanced", playtime: "20h" },
+    { name: "Add a new game", playtime: "0h" },
   ];
 
   useEffect(() => {    

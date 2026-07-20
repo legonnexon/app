@@ -88,15 +88,17 @@ export default function CardSection({ games, selected_game, set_selected_game}) 
           <div
             key={game.name + index}
             ref={el => (cardRefs.current[index] = el)}
-            className={`${index === selected_game ? "selected-game" : "other-game"} card-image`}
+            className={`${index === selected_game ? "selected-game" : "other-game"} ${ index === games.length-1? "add-game" : ""} card-image`}
           >
             <Image 
               src={`/${game.front}`}
               width={500}
               height={500}
               alt='Picture'
-              className='border-radius'
+              className={index === games.length-1 ? "hidden":"" + " border-radius" }
             />
+
+            <p className={`${index === games.length-1 ? "":"hidden"} add-game-text`}>+</p>
           </div>
         ))}
       </div>
